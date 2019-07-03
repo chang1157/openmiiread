@@ -1,0 +1,36 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context=".view.activity.MainActivity">
+
+	<item
+			android:id="@+id/action_add_local"
+			android:icon="@drawable/ic_add"
+			android:title="@string/book_local"
+			app:showAsAction="never"/>
+
+	<item
+			android:id="@+id/action_list_grid"
+			android:icon="@drawable/ic_view_mode_list"
+			android:title="@string/action_list_grid"
+			app:showAsAction="never"/>
+
+	<item
+			android:id="@+id/action_restore_source"
+			android:icon="@drawable/ic_restore"
+			android:title="@string/action_update_source"
+			app:showAsAction="never"/>
+
+	<item
+			android:id="@+id/action_clear_cache"
+			android:icon="@drawable/ic_clear_cache"
+			android:title="@string/clear_content"
+			app:showAsAction="never"/>
+
+	<item
+			android:id="@+id/action_clearBookshelf"
+			android:icon="@drawable/ic_clear_all"
+			android:title="@string/clear_bookshelf"
+			app:showAsAction="never"/>
+
+</menu>

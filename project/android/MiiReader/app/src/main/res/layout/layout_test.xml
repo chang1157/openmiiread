@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+		xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+		android:id="@+id/paddingLayout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:paddingBottom="20dp"
+		android:paddingTop="20dp">
+
+	<androidx.appcompat.widget.AppCompatImageView
+			android:layout_width="0dp"
+			android:layout_height="0dp"
+			app:layout_constraintLeft_toLeftOf="@id/top_padding_decrease"
+			app:layout_constraintRight_toRightOf="@id/top_padding_increase"
+			app:layout_constraintTop_toTopOf="@id/right_padding_decrease"
+			app:layout_constraintBottom_toBottomOf="@id/right_padding_increase"
+			app:srcCompat="@drawable/ic_page_padding"
+			android:id="@+id/icon"
+			android:scaleType="fitCenter"/>
+
+	<androidx.appcompat.widget.AppCompatImageView
+			android:layout_width="0dp"
+			android:layout_height="0dp"
+			app:layout_constraintLeft_toLeftOf="@id/top_padding_decrease"
+			app:layout_constraintRight_toRightOf="@id/top_padding_increase"
+			app:layout_constraintTop_toTopOf="@id/right_padding_decrease"
+			app:layout_constraintBottom_toBottomOf="@id/right_padding_increase"
+			app:srcCompat="@drawable/ic_page_padding_content"
+			android:id="@+id/padding_icon_inside"
+			android:layout_margin="3pt"
+			android:scaleType="fitCenter"/>
+
+	<androidx.appcompat.widget.AppCompatTextView
+			app:layout_constraintTop_toTopOf="parent"
+			app:layout_constraintLeft_toLeftOf="parent"
+			android:layout_width="50dp"
+			android:layout_height="32dp"
+			android:gravity="center"
+			android:background="@drawable/ripplebg_dlg_button_stroke"
+			app:layout_constraintHorizontal_chainStyle="packed"
+			app:layout_constraintRight_toLeftOf="@id/top_padding_txt"
+			android:id="@+id/top_padding_decrease"
+			android:text="上-"/>
+
+	<androidx.appcompat.widget.AppCompatTextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/top_padding_txt"
+			app:layout_constraintLeft_toRightOf="@id/top_padding_decrease"
+			app:layout_constraintRight_toLeftOf="@id/top_padding_increase"
+			app:layout_constraintTop_toTopOf="@id/top_padding_decrease"
+			app:layout_constraintBottom_toBottomOf="@id/top_padding_decrease"
+			app:layout_constraintHorizontal_chainStyle="packed"
+			android:minWidth="50dp"
+			android:gravity="center"
+			android:text="50%"/>
+
+	<androidx.appcompat.widget.AppCompatTextView
+			android:layout_width="50dp"
+			android:layout_height="32dp"
+			android:gravity="center"
+			android:background="@drawable/ripplebg_dlg_button_stroke"
+			android:id="@+id/top_padding_increase"
+			app:layout_constraintTop_toTopOf="@id/top_padding_decrease"
+			app:layout_constraintRight_toRightOf="parent"
+			app:layout_constraintLeft_toRightOf="@id/top_padding_txt"
+			app:layout_constraintHorizontal_chainStyle="packed"
+			android:text="上+"/>
+
+	<androidx.appcompat.widget.AppCompatTextView
+			android:layout_width="50dp"
+			android:layout_height="32dp"
+			android:gravity="center"
+			android:background="@drawable/ripplebg_dlg_button_stroke"
+			android:id="@+id/right_padding_decrease"
+			app:layout_constraintTop_toBottomOf="@id/top_padding_increase"
+			app:layout_constraintLeft_toRightOf="@id/icon"
+			android:text="右-"/>
+
+	<androidx.appcompat.widget.AppCompatTextView
+			android:layout_width="wrap_content"
+			android:layout_height="32dp"
+			android:minWidth="50dp"
+			android:id="@+id/right_padding_txt"
+			android:text="50%"
+			app:layout_constraintTop_toBottomOf="@id/right_padding_decrease"
+			app:layout_constraintLeft_toLeftOf="@id/right_padding_decrease"
+			app:layout_constraintRight_toRightOf="@id/right_padding_decrease"
+			android:gravity="center"/>
+
+	<androidx.appcompat.widget.AppCompatTextView
+			android:layout_width="50dp"
+			android:layout_height="32dp"
+			android:gravity="center"
+			android:background="@drawable/ripplebg_dlg_button_stroke"
+			android:id="@+id/right_padding_increase"
+			app:layout_constraintTop_toBottomOf="@id/right_padding_txt"
+			app:layout_constraintLeft_toLeftOf="@id/right_padding_decrease"
+			android:text="右+"/>
+
+	<androidx.appcompat.widget.AppCompatTextView
+			android:layout_width="50dp"
+			android:layout_height="32dp"
+			android:gravity="center"
+			android:background="@drawable/ripplebg_dlg_button_stroke"
+			android:id="@+id/bottom_padding_decrease"
+			android:text="下-"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintRight_toLeftOf="@id/bottom_padding_txt"
+			app:layout_constraintTop_toBottomOf="@id/right_padding_increase"
+			app:layout_constraintHorizontal_chainStyle="packed"/>
+
+	<androidx.appcompat.widget.AppCompatTextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/bottom_padding_txt"
+			app:layout_constraintTop_toTopOf="@id/bottom_padding_decrease"
+			app:layout_constraintBottom_toBottomOf="@id/bottom_padding_decrease"
+			android:minWidth="50dp"
+			android:gravity="center"
+			android:text="50%"
+			app:layout_constraintLeft_toRightOf="@id/bottom_padding_decrease"
+			app:layout_constraintRight_toLeftOf="@id/bottom_padding_increase"/>
+
+	<androidx.appcompat.widget.AppCompatTextView
+			android:layout_width="50dp"
+			android:layout_height="32dp"
+			android:gravity="center"
+			android:background="@drawable/ripplebg_dlg_button_stroke"
+			android:id="@+id/bottom_padding_increase"
+			app:layout_constraintRight_toRightOf="parent"
+			app:layout_constraintTop_toTopOf="@id/bottom_padding_decrease"
+			app:layout_constraintLeft_toRightOf="@id/bottom_padding_txt"
+			android:text="下+"/>
+
+	<androidx.appcompat.widget.AppCompatTextView
+			android:layout_width="50dp"
+			android:layout_height="32dp"
+			android:gravity="center"
+			android:background="@drawable/ripplebg_dlg_button_stroke"
+			android:id="@+id/left_padding_decrease"
+			app:layout_constraintTop_toTopOf="@id/right_padding_decrease"
+			app:layout_constraintRight_toLeftOf="@id/icon"
+			android:text="左-"/>
+
+	<androidx.appcompat.widget.AppCompatTextView
+			android:layout_width="wrap_content"
+			android:layout_height="32dp"
+			android:id="@+id/left_padding_txt"
+			app:layout_constraintTop_toBottomOf="@id/left_padding_decrease"
+			android:text="50%"
+			android:minWidth="50dp"
+			app:layout_constraintLeft_toLeftOf="@id/left_padding_decrease"
+			app:layout_constraintRight_toRightOf="@id/left_padding_decrease"
+			android:gravity="center"/>
+
+	<androidx.appcompat.widget.AppCompatTextView
+			android:layout_width="50dp"
+			android:layout_height="32dp"
+			android:gravity="center"
+			android:background="@drawable/ripplebg_dlg_button_stroke"
+			app:layout_constraintLeft_toLeftOf="@id/left_padding_decrease"
+			app:layout_constraintTop_toBottomOf="@id/left_padding_txt"
+			android:id="@+id/left_padding_increase"
+			android:text="左+"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

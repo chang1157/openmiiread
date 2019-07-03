@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+		xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:orientation="horizontal">
+
+	<View android:layout_width="0dp"
+	      android:layout_height="1dp"
+	      android:id="@+id/lmargin"
+	      android:visibility="gone"/>
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+			android:layout_width="68dp"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:layout_margin="0dp"
+			android:padding="0dp"
+			android:id="@+id/ll_content">
+
+		<androidx.appcompat.widget.AppCompatImageView
+				android:layout_width="match_parent"
+				android:layout_height="42dp"
+				app:layout_constraintTop_toTopOf="parent"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintLeft_toLeftOf="parent"
+				app:layout_constraintRight_toRightOf="parent"
+				android:id="@+id/bg_eg"/>
+
+		<androidx.appcompat.widget.AppCompatTextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/bg_txt"
+				android:textSize="13sp"
+				android:textStyle="bold"
+				android:layout_marginTop="4dp"
+				app:layout_constraintTop_toBottomOf="@id/bg_eg"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintLeft_toLeftOf="parent"
+				android:gravity="center"
+				app:layout_constraintRight_toRightOf="parent"
+				android:singleLine="true"
+				android:ellipsize="end"
+				android:text="color"/>
+
+		<androidx.appcompat.widget.AppCompatImageView
+				android:layout_width="24dp"
+				android:layout_height="24dp"
+				android:id="@+id/check_icon"
+				app:srcCompat="@drawable/ic_check_black_24dp"
+				app:tint="@color/bg_divider_line"
+				app:layout_constraintLeft_toLeftOf="@id/bg_eg"
+				app:layout_constraintRight_toRightOf="@id/bg_eg"
+				app:layout_constraintTop_toTopOf="@id/bg_eg"
+				app:layout_constraintBottom_toBottomOf="@id/bg_eg"
+				android:visibility="gone"/>
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+	<View android:layout_width="12dp"
+	      android:layout_height="1dp"
+	      android:id="@+id/rmargin"
+	      android:visibility="gone"/>
+</LinearLayout>

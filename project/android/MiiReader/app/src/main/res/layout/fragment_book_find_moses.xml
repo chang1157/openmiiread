@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/ll_content"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical"
+              android:transitionName="@string/transition_target"
+              tools:ignore="UnusedAttribute">
+
+	<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+			android:id="@+id/refresh_layout"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+		<FrameLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+
+			<androidx.recyclerview.widget.RecyclerView
+					android:id="@+id/rv_find_right"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:padding="0dp"/>
+
+			<include layout="@layout/view_empty"/>
+
+		</FrameLayout>
+
+	</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>

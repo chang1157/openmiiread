@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:name="canvas1"
+        android:width="80dp"
+        android:height="80dp"
+        android:viewportWidth="80"
+        android:viewportHeight="80">
+	<!--&lt;!&ndash; Rectangle &ndash;&gt;-->
+	<!--<path-->
+	<!--android:name="rectangle"-->
+	<!--android:pathData="M 17,62 C 17,63.66 18.34,65 20,65 L 59,65 C 60.66,65 62,63.66 62,62 L 62,19 C 62,17.34 60.66,16 59,16 L 20,16 C 18.34,16 17,17.34 17,19 L 17,62 Z"-->
+	<!--android:fillColor="@color/bg_divider_line" />-->
+
+	<!-- Rectangle 2 -->
+	<path
+			android:name="rectangle2"
+			android:pathData="M 5,72 C 5,74.21 6.79,76 9,76 L 71,76 C 73.21,76 75,74.21 75,72 L 75,9 C 75,6.79 73.21,5 71,5 L 9,5 C 6.79,5 5,6.79 5,9 L 5,72 Z"
+			android:fillColor="#00000000"
+			android:strokeColor="@color/colorControlActivatedRipple"
+			android:strokeWidth="1"/>
+</vector>

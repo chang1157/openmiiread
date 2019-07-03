@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ll_content">
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/action_bar"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="?attr/actionBarStyle"
+            android:transitionName="sharedView"
+            tools:ignore="UnusedAttribute">
+
+        <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+            app:layout_constraintTop_toBottomOf="@id/action_bar"
+            android:layout_width="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="0dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <View android:layout_width="match_parent"
+                  app:layout_constraintTop_toTopOf="parent"
+                  android:layout_height="90dp"
+                  android:background="#59a7f9"
+                  android:id="@+id/banner"/>
+
+            <com.moses.miiread.widget.WaveView
+                    android:id="@+id/wave_v1"
+                    app:layout_constraintBottom_toBottomOf="@id/banner"
+                    android:layout_width="match_parent"
+                    app:bg_clr="#51a1f8"
+                    app:bg_start_rate="0"
+                    app:type="bg_only"
+                    android:layout_height="32dp"/>
+
+            <com.moses.miiread.widget.WaveView
+                    android:id="@+id/wave_v2"
+                    app:layout_constraintBottom_toBottomOf="@id/banner"
+                    android:layout_width="match_parent"
+                    app:bg_clr="#65aefa"
+                    app:bg_start_rate="-3"
+                    app:wave_c="3"
+                    app:type="bg_only"
+                    android:alpha="0.95"
+                    android:layout_height="48dp"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    app:srcCompat="@mipmap/ic_launcher_round"
+                    android:id="@+id/icon"
+                    app:layout_constraintTop_toTopOf="@id/banner"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginStart="30dp"
+                    app:layout_constraintBottom_toBottomOf="@id/banner"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="@string/app_name"
+                    android:id="@+id/name"
+                    android:layout_marginStart="20dp"
+                    android:textColor="@color/tv_text_button_nor"
+                    app:layout_constraintTop_toTopOf="@id/icon"
+                    app:layout_constraintBottom_toTopOf="@id/tip"
+                    app:layout_constraintVertical_chainStyle="packed"
+                    app:layout_constraintLeft_toRightOf="@id/icon"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:id="@+id/tip"
+                    android:textColor="@color/tv_text_button_nor"
+                    android:text="马上订阅，开启精彩阅读之旅~"
+                    app:layout_constraintVertical_chainStyle="packed"
+                    app:layout_constraintLeft_toLeftOf="@id/name"
+                    android:layout_marginTop="4dp"
+                    app:layout_constraintTop_toBottomOf="@id/name"
+                    app:layout_constraintBottom_toBottomOf="@id/icon"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_margin="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buy"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/tv_text_button_nor"
+                    android:background="@drawable/bg_gradient_btn"
+                    app:layout_constraintTop_toBottomOf="@id/recycler_view"
+                    android:layout_margin="20dp"
+                    android:text="立即订阅"/>
+
+            <View android:layout_width="match_parent"
+                  android:layout_marginTop="20dp"
+                  android:layout_height="4dp"
+                  android:id="@+id/shades_divider"
+                  app:layout_constraintTop_toBottomOf="@id/buy"
+                  android:background="@color/bg_divider_line"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    app:layout_constraintTop_toBottomOf="@id/shades_divider"
+                    android:layout_width="match_parent"
+                    android:paddingTop="20dp"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:textSize="14sp"
+                    android:id="@+id/tip_about_vip_title"
+                    android:textColor="@color/tv_text_default"
+                    android:text="关于VIP"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    app:layout_constraintTop_toBottomOf="@id/tip_about_vip_title"
+                    android:layout_width="match_parent"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:lineSpacingExtra="1.5dp"
+                    android:paddingTop="4dp"
+                    android:textSize="14sp"
+                    android:id="@+id/tip_about_vip_summary"
+                    android:textColor="@color/tv_text_summary"
+                    android:text="在您的VIP会员资格有效之后您的购买，您可以免费在线阅读所有书籍，没有消耗硬币。VIP帐户最多可以使用2台设备。您可以在“帐户”中管理您的有效设备 - “我的设备“。请保护您的帐户"
+                    android:layout_height="wrap_content"/>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    app:layout_constraintTop_toBottomOf="@id/tip_about_vip_summary"
+                    android:layout_width="match_parent"
+                    android:paddingTop="20dp"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:textSize="14sp"
+                    android:id="@+id/tip_about_ccp_title"
+                    android:textColor="@color/tv_text_default"
+                    android:text="关于入住硬币包"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    app:layout_constraintTop_toBottomOf="@id/tip_about_ccp_title"
+                    android:layout_width="match_parent"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:lineSpacingExtra="1.5dp"
+                    android:paddingTop="4dp"
+                    android:textSize="14sp"
+                    android:id="@+id/tip_about_ccp_summary"
+                    android:textColor="@color/tv_text_summary"
+                    android:text="请每天打开书迷应用程序，转到目录，向右滑动即可打开侧边栏，点按“登记入住”即可获得免费入住硬币和硬币包奖励。不办理登机手续即可放弃硬币包奖励在那一天。
+                    \n免费硬币将在30天后到期。 您可以查看更多通过点击您的免费硬币等有效期限的详细信息侧边栏中的平衡。"
+                    android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    app:layout_constraintTop_toBottomOf="@id/tip_about_ccp_summary"
+                    android:layout_width="match_parent"
+                    android:paddingTop="20dp"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:textSize="14sp"
+                    android:id="@+id/tip_subscription_agr_title"
+                    android:textColor="@color/tv_text_default"
+                    android:text="认购协议"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    app:layout_constraintTop_toBottomOf="@id/tip_subscription_agr_title"
+                    android:layout_width="match_parent"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:lineSpacingExtra="1.5dp"
+                    android:paddingTop="4dp"
+                    android:textSize="14sp"
+                    android:id="@+id/tip_payment"
+                    android:textColor="@color/tv_text_summary"
+                    android:text="付款：购买将从您的Google收取玩帐户"
+                    android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    app:layout_constraintTop_toBottomOf="@id/tip_payment"
+                    android:layout_width="match_parent"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:lineSpacingExtra="1.5dp"
+                    android:paddingTop="20dp"
+                    android:textSize="14sp"
+                    android:id="@+id/tip_renewal"
+                    android:textColor="@color/tv_text_summary"
+                    android:text="续订：您的订阅将自动续订。每次结算都会自动收取订阅费用期间，无论是月度还是其他时期，您可以在开始前不超过24小时收费在您取消订阅之前的每个结算周期。"
+                    android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    app:layout_constraintTop_toBottomOf="@id/tip_renewal"
+                    android:layout_width="match_parent"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:lineSpacingExtra="1.5dp"
+                    android:paddingTop="20dp"
+                    android:textSize="14sp"
+                    android:id="@+id/tip_cancellation"
+                    android:textColor="@color/tv_text_summary"
+                    android:text="取消：您可以随时取消订阅在续订日期之前超过24小时。"
+                    android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    app:layout_constraintTop_toBottomOf="@id/tip_cancellation"
+                    android:layout_width="match_parent"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:lineSpacingExtra="1.5dp"
+                    android:paddingTop="4dp"
+                    android:textSize="14sp"
+                    android:id="@+id/tip_manage"
+                    android:textColor="@color/tv_text_summary"
+                    android:text="管理您的订阅：您可以查看，更改或取消订阅。"
+                    android:layout_height="wrap_content"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bottom"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/bg_divider_line"
+                    app:layout_constraintTop_toBottomOf="@id/tip_manage">
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/terms_of_service"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:gravity="center_vertical"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintRight_toLeftOf="@id/gap"
+                        android:text="服务条款"/>
+
+                <View android:layout_width="1dp" android:layout_height="0dp"
+                      android:layout_marginLeft="6dp"
+                      android:layout_marginRight="6dp"
+                      android:id="@+id/gap"
+                      android:layout_marginTop="3dp"
+                      android:layout_marginBottom="3dp"
+                      app:layout_constraintHorizontal_chainStyle="packed"
+                      app:layout_constraintLeft_toRightOf="@id/terms_of_service"
+                      app:layout_constraintRight_toLeftOf="@id/privacy"
+                      app:layout_constraintTop_toTopOf="@id/terms_of_service"
+                      app:layout_constraintBottom_toBottomOf="@id/terms_of_service"
+                      android:background="@color/tv_text_default"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        app:layout_constraintTop_toTopOf="@id/terms_of_service"
+                        app:layout_constraintBottom_toBottomOf="@id/terms_of_service"
+                        android:gravity="center_vertical"
+                        app:layout_constraintLeft_toRightOf="@id/gap"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/privacy"
+                        android:text="隐私政策"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/terms_of_service"
+                        android:layout_marginTop="6dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:id="@+id/subscription_service"
+                        android:text="订阅服务协议"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

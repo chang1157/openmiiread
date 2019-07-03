@@ -1,0 +1,41 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cv_root"
+        android:layout_width="match_parent"
+        android:background="@drawable/shape_card_view"
+        android:orientation="vertical"
+        android:minWidth="280dp"
+        android:layout_height="wrap_content">
+    <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:textSize="14sp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/tv_text_summary"
+            android:padding="10dp"
+            android:text="推荐书迷给朋友"
+            android:layout_marginStart="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:id="@+id/title"
+            android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:id="@+id/image"
+            android:paddingStart="10dp"
+            android:paddingEnd="0dp"
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toBottomOf="@id/title"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/tv_text_summary"
+            android:id="@+id/text2"
+            android:layout_marginStart="10dp"
+            android:padding="10dp"
+            app:layout_constraintTop_toBottomOf="@id/image"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

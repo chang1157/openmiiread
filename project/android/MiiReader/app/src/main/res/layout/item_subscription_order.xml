@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:id="@+id/list_item"
+        android:layout_margin="5dp"
+        android:background="@drawable/bg_subscription_uncheck"
+        android:padding="6dp"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_height="wrap_content">
+    <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:id="@+id/cost"
+            android:text="18"
+            android:textSize="26sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="￥"
+            android:id="@+id/coin_icon"
+            app:layout_constraintBottom_toBottomOf="@id/cost"
+            app:layout_constraintRight_toLeftOf="@id/cost"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="4dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:id="@+id/name"
+            android:text="1个月"
+            android:textStyle="bold"
+            android:textColor="@color/tv_text_default"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/cost"
+            app:layout_constraintBottom_toBottomOf="@id/cost"
+            android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/summary"
+            android:text="解锁全部"
+            android:layout_marginTop="12dp"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@id/name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:id="@+id/main_view"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		tools:showIn="@layout/activity_main">
+
+	<com.google.android.material.appbar.AppBarLayout
+			android:id="@+id/action_bar"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			app:layout_constraintTop_toTopOf="parent"
+			tools:ignore="UnusedAttribute"
+			android:paddingTop="16dp"
+			android:paddingBottom="12dp"
+			android:paddingStart="16dp"
+			android:paddingEnd="4dp"
+			app:elevation="0dp">
+
+		<androidx.appcompat.widget.Toolbar
+				android:id="@+id/toolbar"
+				style="@style/NoPaddingToolbar"
+				android:layout_width="match_parent"
+				android:layout_height="?attr/actionBarSize"
+				android:gravity="center_vertical"
+				android:theme="?attr/actionBarStyle"
+				android:transitionName="sharedView"
+				app:layout_scrollFlags="scroll|enterAlways"
+				app:popupTheme="@style/AppTheme.PopupOverlay"
+				app:navigationIcon="@mipmap/ic_launcher_round"
+				app:menu="@null">
+
+			<androidx.cardview.widget.CardView
+					android:id="@+id/card_search"
+					android:layout_width="match_parent"
+					android:layout_height="42dp"
+					app:cardBackgroundColor="@color/background_card"
+					app:cardElevation="0dp"
+					android:layout_marginStart="4dp"
+					android:layout_marginEnd="8dp"
+					app:cardCornerRadius="5dp">
+
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:layout_marginLeft="11dp"
+						android:gravity="center_vertical"
+						android:text="@string/search_book_key"
+						tools:ignore="RtlHardcoded"/>
+			</androidx.cardview.widget.CardView>
+		</androidx.appcompat.widget.Toolbar>
+	</com.google.android.material.appbar.AppBarLayout>
+
+	<com.google.android.material.bottomnavigation.BottomNavigationView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/bottom_navigation"
+			android:background="@color/background"
+			app:menu="@menu/bottom_nav_main"
+			app:labelVisibilityMode="labeled"
+			android:theme="@style/MyBottomNavigationView"
+			app:itemIconTint="@color/bg_bottom_navi_icon"
+			app:itemTextColor="@color/bg_bottom_navi_text"
+			app:layout_constraintBottom_toBottomOf="parent">
+
+	</com.google.android.material.bottomnavigation.BottomNavigationView>
+
+	<FrameLayout
+			android:id="@+id/content_ll"
+			app:layout_constraintTop_toBottomOf="@id/action_bar"
+			app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"/>
+
+	<View style="@style/Style.Shadow.Top"
+	      app:layout_constraintTop_toTopOf="@id/content_ll"
+	      app:layout_constraintLeft_toLeftOf="parent"
+	      app:layout_constraintRight_toRightOf="parent"/>
+
+	<View style="@style/Style.Shadow.Bottom"
+	      app:layout_constraintBottom_toBottomOf="@id/content_ll"
+	      app:layout_constraintLeft_toLeftOf="parent"
+	      app:layout_constraintRight_toRightOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

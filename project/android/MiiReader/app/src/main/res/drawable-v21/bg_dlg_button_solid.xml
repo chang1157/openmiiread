@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:state_pressed="false">
+		<shape>
+			<solid android:color="@color/colorControlActivated"/>
+			<corners android:radius="4dp"/>
+		</shape>
+	</item>
+	<item android:state_pressed="true">
+		<ripple android:color="@color/colorControlActivatedRipple">
+			<item android:id="@android:id/background"
+				  android:drawable="@drawable/ripplebg_dlg_button_solid">
+			</item>
+		</ripple>
+	</item>
+</selector>

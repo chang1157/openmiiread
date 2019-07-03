@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--<Preference-->
+    <!--android:key="webDavSetting"-->
+    <!--android:title="WebDav设置"-->
+    <!--android:summary="WebDav备份与恢复" />-->
+
+    <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/book_px_title"
+            android:entryValues="@array/book_px_value"
+            android:key="@string/pk_book_px"
+            android:title="@string/book_px"/>
+
+    <com.moses.miiread.widget.prefs.ATESwitchPreference
+            android:defaultValue="true"
+            android:key="@string/pk_auto_refresh"
+            android:summary="@string/ps_auto_refresh"
+            android:title="@string/pt_auto_refresh"/>
+
+    <com.moses.miiread.widget.prefs.ATESwitchPreference
+            android:defaultValue="false"
+            android:key="@string/pk_auto_download"
+            android:summary="@string/ps_auto_download"
+            android:title="@string/pt_auto_download"/>
+
+    <com.moses.miiread.widget.prefs.ATESwitchPreference
+            android:defaultValue="false"
+            android:key="@string/pk_default_read"
+            android:summary="@string/ps_default_read"
+            android:title="@string/pt_default_read"/>
+
+    <com.moses.miiread.widget.number.NumberPickerPreference
+            android:defaultValue="6"
+            android:key="@string/pk_threads_num"
+            android:summary="@string/threads_num"
+            android:title="@string/update_search_threads_num"
+            app:MaxValue="1024"
+            app:MinValue="1"/>
+
+    <com.moses.miiread.widget.prefs.ATESwitchPreference
+            android:defaultValue="true"
+            android:key="showAllFind"
+            android:summary="@string/ps_show_all_find"
+            android:title="@string/pt_show_all_find"/>
+
+    <Preference
+            android:key="@string/pk_download_path"
+            android:title="@string/download_path"/>
+
+    <com.moses.miiread.widget.prefs.ATESwitchPreference
+            android:defaultValue="false"
+            android:key="upChangeSourceLastChapter"
+            android:summary="@string/up_change_source_last_chapter_s"
+            android:title="@string/up_change_source_last_chapter_t"/>
+
+    <com.moses.miiread.widget.prefs.ATESwitchPreference
+            android:defaultValue="true"
+            android:key="process_text"
+            android:summary="长按文字在操作菜单中显示阅读·搜索"
+            android:title="文字操作显示搜索"/>
+
+    <com.moses.miiread.widget.prefs.ATESwitchPreference
+            android:defaultValue="true"
+            android:key="behaviorMain"
+            android:summary="@string/behavior_main_s"
+            android:title="@string/behavior_main_t"/>
+
+</PreferenceScreen>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:gravity="center"
+              android:layout_height="match_parent"
+              android:paddingStart="12dp"
+              android:paddingEnd="12dp"
+              android:transitionName="@string/transition_target"
+              tools:ignore="UnusedAttribute">
+	<TextView android:layout_width="wrap_content"
+	          android:layout_height="wrap_content"
+	          android:text="阅读历史"/>
+
+	<com.moses.miiread.widget.MenuButton
+			style="@style/Widget.AppCompat.ActionButton"
+			android:layout_width="32dp"
+			android:layout_height="32dp"
+			app:gapRate="1.1"
+			app:eleHeight="2.2dp"
+			app:aniDuration="200"
+			android:background="@color/md_red_50"/>
+</LinearLayout>

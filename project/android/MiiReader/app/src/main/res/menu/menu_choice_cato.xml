@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context=".view.activity.MainActivity">
+
+	<item
+			android:id="@+id/action_cato"
+			android:icon="@drawable/umeng_socialize_more"
+			android:iconTint="@color/tv_text_default"
+			android:title="@string/cato"
+			app:showAsAction="always"
+			tools:ignore="UnusedAttribute"/>
+
+</menu>

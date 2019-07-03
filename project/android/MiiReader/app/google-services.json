@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "39293310266",
+    "firebase_url": "https://bookreader-e6f93.firebaseio.com",
+    "project_id": "bookreader-e6f93",
+    "storage_bucket": "bookreader-e6f93.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:39293310266:android:2588d727870b749e",
+        "android_client_info": {
+          "package_name": "com.moses.miiread"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "39293310266-njpfn4n716lk8o6qlcjdf2608urq0cum.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSfpRTKqh3TsTY9qa1vSIunFY9_QiicwI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

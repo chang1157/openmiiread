@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.activity.ReadStyleActivity">
+
+    <item
+        android:id="@+id/action_save_change"
+        android:title="@string/action_save_change"
+        app:showAsAction="always" />
+
+</menu>

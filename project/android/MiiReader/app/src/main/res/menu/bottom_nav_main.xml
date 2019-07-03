@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+            android:id="@+id/navi_shelf"
+            android:icon="@drawable/ic_book_library"
+            android:title="书架"/>
+
+    <item
+            android:id="@+id/navi_his"
+            android:icon="@drawable/ic_history_black_24dp"
+            android:visible="false"
+            android:title="历史"/>
+
+    <item
+            android:id="@+id/navi_find"
+            android:icon="@drawable/ic_view_array"
+            android:title="聚合"/>
+
+</menu>

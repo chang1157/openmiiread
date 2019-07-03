@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:tools="http://schemas.android.com/tools"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		android:id="@+id/ll_content"
+		android:layout_width="match_parent"
+		android:minWidth="280dp"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:background="@color/background"
+		android:padding="10dp">
+
+	<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:padding="10dp"
+			android:text="@string/bookmark"
+			android:textSize="20sp"/>
+
+	<TextView
+			android:id="@+id/tvChapterName"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:padding="10dp"
+			android:text="@string/bookmark"/>
+
+	<com.moses.miiread.widget.views.ATETextInputLayout
+			android:id="@+id/til_content"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:padding="10dp"
+			android:hint="@string/content">
+
+		<com.moses.miiread.widget.views.ATEEditText
+				android:id="@+id/tie_content"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:maxLines="3"/>
+	</com.moses.miiread.widget.views.ATETextInputLayout>
+
+	<TextView
+			android:id="@+id/tv_ok"
+			android:layout_width="match_parent"
+			android:layout_height="32dp"
+			android:layout_margin="10dp"
+			android:background="@drawable/bg_dlg_button_solid"
+			android:clickable="true"
+			android:focusable="true"
+			android:gravity="center"
+			android:padding="5dp"
+			android:text="@string/ok"
+			android:textColor="@color/tv_text_button_nor"/>
+
+	<LinearLayout
+			android:id="@+id/llEdit"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+
+		<TextView
+				android:id="@+id/tv_del"
+				android:layout_width="0dp"
+				android:layout_height="32dp"
+				android:layout_weight="1"
+				android:layout_margin="10dp"
+				android:background="@drawable/bg_dlg_button_stroke"
+				android:gravity="center"
+				android:padding="5dp"
+				android:text="@string/action_del"
+				android:textColor="@color/colorControlActivated"/>
+
+		<TextView
+				android:id="@+id/tv_save"
+				android:layout_width="0dp"
+				android:layout_height="32dp"
+				android:layout_weight="1"
+				android:layout_margin="10dp"
+				android:background="@drawable/bg_dlg_button_solid"
+				android:gravity="center"
+				android:padding="5dp"
+				android:text="@string/action_save"
+				android:textColor="@color/tv_text_button_nor"/>
+
+	</LinearLayout>
+
+</LinearLayout>

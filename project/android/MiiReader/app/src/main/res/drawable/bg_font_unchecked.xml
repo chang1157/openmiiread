@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:state_pressed="true">
+		<shape>
+			<size android:width="100dp" android:height="100dp"/>
+			<corners android:radius="100dp"/>
+			<stroke android:color="@color/bg_divider_line" android:width="1.3dp"/>
+			<solid android:color="@color/colorControlActivatedRipple"/>
+		</shape>
+	</item>
+	<item android:state_pressed="false">
+		<shape>
+			<size android:width="100dp" android:height="100dp"/>
+			<corners android:radius="100dp"/>
+			<stroke android:color="@color/bg_divider_line" android:width="1.3dp"/>
+		</shape>
+	</item>
+</selector>

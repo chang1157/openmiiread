@@ -1,7 +1,7 @@
 # openmiiread
 书迷开源版本
 # 开发
-- 本项目Fork于 kunfei https://github.com/gedoor
+- 本项目Fork于 kunfei https://github.com/gedoor （fork from https://github.com/ZhangQinhao/MONKOVEL）
 
 # 软件截图
 ![image](https://gedoor.github.io/MyBookshelf/image/mybook1.jpg)
